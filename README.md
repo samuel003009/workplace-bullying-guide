@@ -21,7 +21,22 @@ npm run typecheck
 
 推送到 `main` 後，GitHub Actions（`.github/workflows/deploy.yml`）會依序執行型別檢查、單元測試、建置，並把 `out/` 部署到 GitHub Pages。Pull request 只跑檢查與建置，不部署。
 
-第一次使用前，到儲存庫的 Settings → Pages，把 Source 設為「GitHub Actions」。
+### 第一次推送
+
+這份專案已經有完整的 commit 紀錄，但還沒有設定遠端儲存庫。
+
+1. 在 GitHub 建立一個空的儲存庫，不要勾選 README、.gitignore 或授權條款。免費方案的 GitHub Pages 需要公開儲存庫。
+2. 到儲存庫的 Settings → Pages，把 Source 設為「GitHub Actions」。
+3. 在專案資料夾執行：
+
+   ```bash
+   git remote add origin https://github.com/<帳號>/<儲存庫>.git
+   git push -u origin main
+   ```
+
+4. 到 Actions 分頁確認「Deploy to GitHub Pages」執行成功，網址會顯示在 deploy 工作的摘要。
+
+之後每次推送到 `main` 都會自動重新部署。
 
 網站會放在 `https://<帳號>.github.io/<儲存庫>/`，不在網域根目錄，所以建置時由部署流程帶入 `NEXT_PUBLIC_BASE_PATH`。要部署到其他靜態主機的根目錄時，不設這個變數，直接上傳 `out/` 即可。
 
