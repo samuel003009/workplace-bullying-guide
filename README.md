@@ -73,6 +73,7 @@ src/
     ResourceCard.tsx     協助資源卡、電話
     AppealTeamTable.tsx  申復調查小組組成表
     SourceTables.tsx     內容對照表
+    VideoEmbed.tsx       YouTube 影片（點擊後才載入播放器）
     CopyButton.tsx、Pager.tsx、Footer.tsx
   lib/
     data.ts              全站資料：規模、義務、待辦、範本、資源、問答、頁面對照
@@ -101,4 +102,5 @@ docs/
 
 - 字型以 `<link>` 從 Google Fonts 載入（Noto Serif TC、Noto Sans TC、IBM Plex Mono），載入失敗時退回系統字型。
 - 沒有後端、不蒐集資料；所選規模存在瀏覽器的 localStorage。
+- 首頁的宣導影片嵌自 YouTube（`VideoEmbed` 元件）。按下播放後才載入播放器，並使用 youtube-nocookie.com 網域；要換影片時改 `src/app/page.tsx` 裡的 `videoId`。
 - 準則條號依手冊內文的引註，尚未與法規資料庫的準則全文逐條核對。

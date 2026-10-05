@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ScaleOnly } from '@/components/ScaleContext';
 import ScalePicker from '@/components/ScalePicker';
+import VideoEmbed from '@/components/VideoEmbed';
 
 export const metadata: Metadata = {
   description: '選擇僱用人數，查看職場霸凌防治的法定義務、處理步驟與每一個期限。',
@@ -19,6 +20,11 @@ export default function HomePage() {
       </div>
 
       <ScalePicker />
+
+      <div className="block">
+        <h2>宣導影片</h2>
+        <VideoEmbed videoId="QbfefQjslX0" title="職場霸凌宣導影片" credit="章棋翔" />
+      </div>
 
       <div className="block">
         <h2>處理流程</h2>

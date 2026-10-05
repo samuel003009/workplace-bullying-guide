@@ -323,6 +323,7 @@
 | Tabs | 教育訓練三類對象分頁 | 事前防治 |
 | ScalePicker、DutyMatrix、TodoList | 規模提問、義務矩陣、待辦清單 | 首頁、規模義務檢核 |
 | DeadlineCalculator、FormsBrowser | 期限試算、範本卡與階段篩選 | 期限試算與書表範本 |
+| VideoEmbed | 宣導影片；先顯示封面，按下播放後才載入 YouTube 播放器 | 首頁 |
 | ResourceCard、AppealTeamTable、SourceTables、CopyButton、Pager、Footer | 資源卡、申復調查小組表、對照表、複製鈕、上下頁、頁尾 | 各頁 |
 
 ### 瀏覽器檢查結果
