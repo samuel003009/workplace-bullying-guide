@@ -6,8 +6,6 @@ type Props = {
   /** YouTube 影片 ID，例如 https://youtu.be/QbfefQjslX0 的 QbfefQjslX0 */
   videoId: string;
   title: string;
-  /** 上傳者或頻道名稱 */
-  credit?: string;
 };
 
 /**
@@ -15,7 +13,7 @@ type Props = {
  * 這樣在使用者決定觀看之前，瀏覽器不會載入 YouTube 的播放器與其 Cookie；
  * 播放器使用 youtube-nocookie.com 網域。
  */
-export default function VideoEmbed({ videoId, title, credit }: Props) {
+export default function VideoEmbed({ videoId, title }: Props) {
   const [playing, setPlaying] = useState(false);
   const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
 
@@ -58,7 +56,6 @@ export default function VideoEmbed({ videoId, title, credit }: Props) {
       </div>
       <figcaption>
         <b>{title}</b>
-        {credit ? <span>影片來源：{credit}（YouTube）</span> : null}
         <a href={watchUrl} target="_blank" rel="noopener noreferrer">
           在 YouTube 上觀看
         </a>

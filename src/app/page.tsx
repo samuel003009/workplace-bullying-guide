@@ -23,7 +23,7 @@ export default function HomePage() {
 
       <div className="block">
         <h2>宣導影片</h2>
-        <VideoEmbed videoId="QbfefQjslX0" title="職場霸凌宣導影片" credit="章棋翔" />
+        <VideoEmbed videoId="QbfefQjslX0" title="職場霸凌宣導影片" />
       </div>
 
       <div className="block">
